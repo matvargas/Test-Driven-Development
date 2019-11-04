@@ -14,4 +14,10 @@ import static org.junit.Assert.*;
         assertTrue(new Dollar(5).equals(new Dollar(5)));
         assertFalse(new Dollar(5).equals(new Dollar(6)));
      }
+
+     @Test
+     public void testCurrency() {
+        assertEquals("USD", Money.dollar(1).currency());
+        assertEquals("CHF", Money.franc(1).currency());
+     }
 }  
