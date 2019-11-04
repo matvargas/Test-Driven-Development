@@ -10,9 +10,10 @@ import static org.junit.Assert.*;
      }
 
     @Test
-     public void testEquality() {
-        assertTrue(new Dollar(5).equals(new Dollar(5)));
-        assertFalse(new Dollar(5).equals(new Dollar(6)));
+    public void testEquality() {
+        assertTrue(Money.dollar(5).equals(Money.dollar(5))); 
+        assertFalse(Money.dollar(5).equals(Money.dollar(6)));
+        assertFalse(Money.franc(5).equals(Money.dollar(5)));
      }
 
      @Test
